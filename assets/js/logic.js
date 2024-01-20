@@ -62,5 +62,19 @@ function checkAnswer(event) {
   var selectedAnswer = parseInt(event.target.getAttribute("data-index")); // check indeex for answer selected
   var correctAnswer = questions[currentQuestion].correctAnswer; // check correct answer
 
-  
+  if (selectedAnswer === correctAnswer) {
+    feedbackDiv.textContent = "Correct!"; // feedback to player stating if answer is correct
+    score += 10; // max score
+  } else {
+    feedbackDiv.textContent = "Wrong! -10 seconds"; // display showing wrong answer and time
+    timeLeft -= 10;
   }
+
+  currentQuestion++; // slide to next question for user
+
+  if (currentQuestion < questions.length) { // if more questions show user otherwise end quiz
+    showQuestion();
+  } else {
+    endQuiz();
+  }
+
