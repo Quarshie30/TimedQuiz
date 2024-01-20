@@ -15,3 +15,7 @@ var finalScoreSpan = document.getElementById("final-score");
 var initialsInput = document.getElementById("initials");
 var submitButton = document.getElementById("submit");
 var startButton = document.getElementById("start");
+
+// Event listeners 
+startButton.addEventListener("click", startQuiz);
+submitButton.addEventListener("click", submitScore);
