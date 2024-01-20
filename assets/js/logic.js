@@ -56,3 +56,11 @@ function showQuestion() {
     choicesDiv.appendChild(choiceBtn);
   }
 }
+
+// Function to check answer
+function checkAnswer(event) {
+  var selectedAnswer = parseInt(event.target.getAttribute("data-index")); // check indeex for answer selected
+  var correctAnswer = questions[currentQuestion].correctAnswer; // check correct answer
+
+  
+  }
