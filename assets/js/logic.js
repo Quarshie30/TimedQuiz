@@ -4,4 +4,14 @@ var timeLeft = 50; // Adjust the time limit as needed
 var score = 0; // score counter
 var timerInterval; // time interval
 
-
+// DOM Elements
+var startScreen = document.getElementById("start-screen");
+var questionsDiv = document.getElementById("questions");
+var endScreen = document.getElementById("end-screen");
+var timeSpan = document.getElementById("time");
+var choicesDiv = document.getElementById("choices");
+var feedbackDiv = document.getElementById("feedback");
+var finalScoreSpan = document.getElementById("final-score");
+var initialsInput = document.getElementById("initials");
+var submitButton = document.getElementById("submit");
+var startButton = document.getElementById("start");
