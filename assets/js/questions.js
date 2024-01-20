@@ -19,5 +19,4 @@ var questions = [
         choices: ["Hyper Text Markup Language", "Hyper Transfer Markup Language", "Highly Texted Markup Language", "Hyperlink and Text Markup Language"],
         correctAnswer: 0
         },
-  ];
-  
+  ]; 
