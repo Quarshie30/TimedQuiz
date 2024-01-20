@@ -77,4 +77,14 @@ function checkAnswer(event) {
   } else {
     endQuiz();
   }
+}
 
+//Function to end quiz
+function endQuiz() {
+  clearInterval(timerInterval);
+
+  questionsDiv.classList.add("hide"); // end question and show end screen
+  endScreen.classList.remove("hide");
+
+  finalScoreSpan.textContent = score; // display final score
+}
