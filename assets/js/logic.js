@@ -88,3 +88,14 @@ function endQuiz() {
 
   finalScoreSpan.textContent = score; // display final score
 }
+
+// Submit final score
+function submitScore() {
+  var initials = initialsInput.value.trim();
+
+  if (initials !== "") { // add inistials and submit final score
+    alert("Score submitted!");
+  } else {
+    alert("Please enter your initials."); // prompting user to enter initials
+  }
+}
