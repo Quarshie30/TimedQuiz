@@ -26,7 +26,7 @@ function startQuiz() {
   questionsDiv.classList.remove("hide");
 
    // Start the timer
-    timerInterval = setInterval(function() {
+    timerInterval = setInterval(function() { // fucntion used for intervals.. allowing restart of timer
     timeLeft--;
     timeSpan.textContent = timeLeft;
 
@@ -34,3 +34,25 @@ function startQuiz() {
       endQuiz();
     }
   }, 1000);
+
+
+  showQuestion();
+}
+
+// display current question and choice
+function showQuestion() {
+  var currentQ = questions[currentQuestion]; // get current question object 
+  document.getElementById("question-title").textContent = currentQ.question;
+
+  choicesDiv.innerHTML = ""; // reseet current choices 
+
+  for (var i = 0; i < currentQ.choices.length; i++) { // constant loop through choices 
+    var choiceBtn = document.createElement("button"); // dom to create new button 
+
+    choiceBtn.textContent = currentQ.choices[i];
+
+    choiceBtn.setAttribute("data-index", i)// store index choice in menemory 
+    choiceBtn.addEventListener("click", checkAnswer); // button listener for click
+    choicesDiv.appendChild(choiceBtn);
+  }
+}
