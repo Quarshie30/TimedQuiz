@@ -24,3 +24,13 @@ submitButton.addEventListener("click", submitScore);
 function startQuiz() {
   startScreen.classList.add("hide");
   questionsDiv.classList.remove("hide");
+
+   // Start the timer
+    timerInterval = setInterval(function() {
+    timeLeft--;
+    timeSpan.textContent = timeLeft;
+
+    if (timeLeft <= 0) {
+      endQuiz();
+    }
+  }, 1000);
