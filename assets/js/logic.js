@@ -19,3 +19,8 @@ var startButton = document.getElementById("start");
 // Event listeners 
 startButton.addEventListener("click", startQuiz);
 submitButton.addEventListener("click", submitScore);
+
+// Functions 
+function startQuiz() {
+  startScreen.classList.add("hide");
+  questionsDiv.classList.remove("hide");
